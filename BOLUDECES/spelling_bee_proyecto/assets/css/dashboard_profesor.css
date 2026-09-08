@@ -1,0 +1,157 @@
+/* ============================================================
+   DASHBOARD_PROFESOR.CSS
+   Estilos del banner, botón crear, listado de torneos y footer
+   ============================================================ */
+
+/* ---- Banner ---- */
+.banner {
+  background: linear-gradient(135deg, var(--color-acento), #6C8EFF);
+  color: var(--color-blanco);
+  border-radius: var(--radio-borde);
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.banner-texto h2 {
+  margin: 0 0 4px 0;
+}
+
+.banner-texto p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.banner-stats {
+  display: flex;
+  gap: 16px;
+}
+
+.stat {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+
+.stat-numero {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+.stat-verde .stat-numero    { color: #B9F6CA; }
+.stat-amarillo .stat-numero { color: #FFE082; }
+.stat-rojo .stat-numero     { color: #FF8A80; }
+
+/* ---- Botón crear torneo ---- */
+.modulo-accion {
+  margin-bottom: 24px;
+}
+
+.btn-crear {
+  display: inline-block;
+  width: auto;
+  padding: 12px 24px;
+}
+
+/* ---- Listado de torneos ---- */
+.modulo-torneos h3 {
+  margin-bottom: 16px;
+}
+
+.sin-datos {
+  color: #888;
+  font-style: italic;
+}
+
+.grilla-torneos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.tarjeta-torneo {
+  display: block;
+  background: var(--color-blanco);
+  border-radius: var(--radio-borde);
+  padding: 18px;
+  text-decoration: none;
+  color: var(--color-texto);
+  box-shadow: var(--sombra-suave);
+  border-left: 5px solid var(--color-borde);
+  transition: transform 0.15s ease;
+}
+
+.tarjeta-torneo:hover {
+  transform: translateY(-2px);
+}
+
+.tarjeta-torneo.estado-verde    { border-left-color: var(--color-exito); }
+.tarjeta-torneo.estado-amarillo { border-left-color: #F5A623; }
+.tarjeta-torneo.estado-rojo     { border-left-color: var(--color-error); }
+
+.tarjeta-torneo-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.badge-estado {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.badge-estado.estado-verde    { background: #E8F5E9; color: var(--color-exito); }
+.badge-estado.estado-amarillo { background: #FFF3E0; color: #F5A623; }
+.badge-estado.estado-rojo     { background: #FDECEA; color: var(--color-error); }
+
+.badge-tipo {
+  font-size: 0.7rem;
+  background: #EEF1F6;
+  color: #666;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.tarjeta-torneo h4 {
+  margin: 0 0 4px 0;
+  font-size: 1.05rem;
+}
+
+.tarjeta-torneo-fecha {
+  color: #888;
+  font-size: 0.85rem;
+  margin: 0 0 12px 0;
+}
+
+.tarjeta-torneo-detalle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ---- Footer ---- */
+.pie-pagina {
+  text-align: center;
+  padding: 24px;
+  color: #999;
+  font-size: 0.8rem;
+}

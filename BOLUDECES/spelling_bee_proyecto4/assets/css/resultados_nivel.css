@@ -1,0 +1,83 @@
+/* ============================================================
+   RESULTADOS_NIVEL.CSS
+   ============================================================ */
+
+.titulo-nivel-grande {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+.subtitulo-round {
+  text-align: center;
+  color: #8B93A7;
+  font-size: 1.1rem;
+  margin: 4px 0 20px 0;
+}
+
+.contenedor-resultados {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px 30px;
+}
+
+.sin-datos-oscuro {
+  color: #8B93A7;
+  font-style: italic;
+}
+
+.tabla-resultados {
+  width: 100%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  background: #1D2029;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.tabla-resultados th {
+  background: #12141C;
+  color: #8B93A7;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.tabla-resultados td {
+  padding: 12px 14px;
+  border-top: 1px solid #2A2E3A;
+  font-size: 0.95rem;
+}
+
+.fila-pasa { border-left: 4px solid #2E7D32; }
+.fila-eliminado { border-left: 4px solid #D32F2F; opacity: 0.75; }
+
+.badge-resultado {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge-pasa { background: #1F4620; color: #7EE787; }
+.badge-eliminado { background: #4A1F1F; color: #FF8A80; }
+
+.acciones-resultados {
+  margin-top: 26px;
+}
+
+.btn-continuar {
+  display: inline-block;
+  background: #3B6EF5;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.btn-continuar:hover { background: #2F58C9; }

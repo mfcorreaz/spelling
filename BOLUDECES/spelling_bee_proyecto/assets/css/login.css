@@ -1,0 +1,31 @@
+/* ============================================================
+   LOGIN.CSS — estilos propios de la vista index.php (login)
+   ============================================================ */
+
+.contenedor-centrado {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.tarjeta {
+  background: var(--color-blanco);
+  border-radius: var(--radio-borde);
+  box-shadow: var(--sombra-suave);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.tarjeta h1 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.tarjeta p.subtitulo {
+  color: #777;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+}

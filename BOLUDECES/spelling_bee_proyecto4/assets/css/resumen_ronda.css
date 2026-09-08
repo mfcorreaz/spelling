@@ -1,0 +1,80 @@
+/* ============================================================
+   RESUMEN_RONDA.CSS
+   ============================================================ */
+
+.grilla-resumen-ronda {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 10px 30px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.columna-nivel {
+  background: #1D2029;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.columna-nivel-titulo {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.titulo-nivel-mini {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.round-mini {
+  display: block;
+  font-size: 0.85rem;
+  color: #8B93A7;
+}
+
+.lista-tiempos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: puesto;
+}
+
+.lista-tiempos li {
+  counter-increment: puesto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.lista-tiempos li::before {
+  content: counter(puesto) ". ";
+  color: #8B93A7;
+  margin-right: 6px;
+}
+
+.item-pasa { background: rgba(46, 125, 50, 0.18); }
+.item-eliminado { background: rgba(211, 47, 47, 0.15); opacity: 0.7; }
+
+.tiempo-en-lista {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.mensaje-final {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.acciones-resultados {
+  text-align: center;
+  padding-bottom: 20px;
+}

@@ -1,0 +1,55 @@
+/* ============================================================
+   PODIO_FINAL.CSS
+   ============================================================ */
+
+.lista-podio {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item-podio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.puesto-numero {
+  font-size: 1.1rem;
+  min-width: 28px;
+}
+
+.item-podio .tiempo-en-lista {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 1er puesto: azul vivo */
+.puesto-oro {
+  background: #1565C0;
+  color: #fff;
+}
+
+/* 2do puesto: verde vivo */
+.puesto-plata {
+  background: #2E7D32;
+  color: #fff;
+}
+
+/* 3er puesto: amarillo vivo */
+.puesto-bronce {
+  background: #F5A623;
+  color: #12141C;
+}
+
+/* Resto: rojo */
+.puesto-resto {
+  background: #B71C1C;
+  color: #fff;
+  opacity: 0.85;
+}

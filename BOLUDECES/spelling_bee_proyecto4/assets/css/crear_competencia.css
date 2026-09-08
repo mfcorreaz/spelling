@@ -1,0 +1,148 @@
+/* ============================================================
+   CREAR_COMPETENCIA.CSS — estilos del wizard de creación
+   ============================================================ */
+
+.pasos-indicador {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.paso-item {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #EEF1F6;
+  color: #888;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.paso-item.activo {
+  background: var(--color-acento);
+  color: var(--color-blanco);
+}
+
+.paso {
+  background: var(--color-blanco);
+  border-radius: var(--radio-borde);
+  box-shadow: var(--sombra-suave);
+  padding: 28px;
+  max-width: 640px;
+}
+
+.ayuda-paso {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+}
+
+.opciones-radio,
+.opciones-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.opciones-radio label,
+.opciones-checkbox label {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.acciones-paso {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  gap: 10px;
+}
+
+.acciones-paso .btn {
+  width: auto;
+  padding: 10px 22px;
+}
+
+.btn-secundario {
+  background: #EEF1F6;
+  color: var(--color-texto);
+}
+
+.btn-secundario:hover {
+  background: #E0E3E8;
+}
+
+.btn-confirmar {
+  background: var(--color-exito);
+}
+
+.btn-confirmar:hover {
+  background: #256428;
+}
+
+/* ---- Bloques de rounds por nivel ---- */
+.bloque-nivel-rounds {
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.bloque-nivel-rounds h4 {
+  margin: 0 0 12px 0;
+}
+
+.fila-round {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #F0F0F0;
+  font-size: 0.9rem;
+}
+
+.fila-round label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fila-round input {
+  width: 90px;
+  padding: 6px 8px;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+}
+
+/* ---- Alumnos ---- */
+.grupo-alumnos-nivel h4 {
+  margin: 18px 0 8px 0;
+  color: var(--color-acento);
+}
+
+.fila-alumno {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #F0F0F0;
+  font-weight: 400;
+}
+
+.detalle-alumno {
+  color: #888;
+  font-size: 0.8rem;
+  margin-left: auto;
+}
+
+/* ---- Resumen ---- */
+.resumen-caja {
+  background: #F7F8FA;
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+
+.resumen-caja p {
+  margin: 6px 0;
+}

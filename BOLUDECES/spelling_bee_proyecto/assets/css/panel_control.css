@@ -1,0 +1,311 @@
+/* ============================================================
+   PANEL_CONTROL.CSS
+   Vista "kiosko" pensada para proyectarse en pantalla grande.
+   Todo pensado para entrar en una pantalla sin necesitar scroll.
+   ============================================================ */
+
+* { box-sizing: border-box; }
+
+html, body.panel-kiosko {
+  height: 100%;
+}
+
+body.panel-kiosko {
+  margin: 0;
+  font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+  background: #12141C;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.btn-salir-panel {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: rgba(255,255,255,0.08);
+  color: #ccc;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.75rem;
+  z-index: 10;
+}
+
+.btn-salir-panel:hover { background: rgba(255,255,255,0.18); }
+
+/* ---- Encabezado (compacto) ---- */
+.panel-header {
+  text-align: center;
+  padding: 10px 20px 6px;
+}
+
+.institucion-organizadora {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.institucion-organizadora h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #B9C2D0;
+}
+
+.icono-institucion {
+  font-size: 1.05rem;
+  display: inline-flex;
+}
+
+.nombre-torneo {
+  margin: 2px 0 8px 0;
+  font-size: clamp(1.3rem, 2.6vw, 2rem);
+  font-weight: 800;
+}
+
+.participante-actual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: clamp(0.9rem, 1.6vw, 1.15rem);
+  background: rgba(255,255,255,0.06);
+  padding: 6px 20px;
+  border-radius: 40px;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.participante-actual .separador { color: #666; }
+
+/* ---- Fila de cards + cronómetro ---- */
+.panel-principal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 20px;
+  min-height: 0;
+}
+
+.fila-cards {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.card-mini {
+  background: #1D2029;
+  border-radius: 14px;
+  padding: 10px 20px;
+  text-align: center;
+  min-width: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-mini h4 {
+  margin: 0 0 4px 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8B93A7;
+}
+
+.card-mini p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.card-cronometro {
+  background: #1D2029;
+  border-radius: 18px;
+  padding: 10px 40px;
+  text-align: center;
+  flex: 1;
+  min-width: 300px;
+  max-width: 520px;
+}
+
+.card-cronometro h4 {
+  margin: 0 0 2px 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8B93A7;
+}
+
+#display-cronometro {
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  margin: 4px 0 10px 0;
+  color: #FFD166;
+}
+
+.controles-cronometro {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-cronometro {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 22px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.9rem;
+  min-width: 90px;
+}
+
+.btn-start { background: #2E7D32; color: #fff; }
+.btn-start.btn-stop { background: #D32F2F; color: #fff; }
+.btn-reiniciar { background: #444; color: #ccc; }
+
+/* ---- Tiempos ---- */
+.fila-tiempos {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+  margin-bottom: 10px;
+  color: #D0D4DC;
+}
+
+.fila-tiempos strong { color: #fff; font-variant-numeric: tabular-nums; }
+
+/* ---- Acciones ---- */
+.fila-acciones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-accion {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 22px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.btn-correcto { background: #2E7D32; color: #fff; }
+.btn-incorrecto { background: #D32F2F; color: #fff; }
+.btn-guardar-parcial { background: #3B6EF5; color: #fff; }
+
+/* ---- Navegación entre alumnos ---- */
+.fila-navegacion-alumnos {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 20px;
+  font-size: 0.78rem;
+  color: #8B93A7;
+  flex-wrap: wrap;
+}
+
+.nav-alumno {
+  color: #8B93A7;
+  text-decoration: none;
+  background: rgba(255,255,255,0.05);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.nav-alumno:hover { background: rgba(255,255,255,0.12); }
+
+.nav-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.card-mini .subvalor {
+  font-size: 0.72rem;
+  color: #8B93A7;
+}
+
+.ayuda-teclado {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #555;
+  margin: 0 0 4px 0;
+}
+
+/* ---- Overlay de resultado (aparece unos segundos al guardar) ---- */
+.overlay-resultado {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 50;
+}
+
+.overlay-resultado.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.overlay-tarjeta {
+  background: #1D2029;
+  border-radius: 20px;
+  padding: 36px 56px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.overlay-icono {
+  font-size: 3.4rem;
+  font-weight: 800;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+}
+
+.overlay-icono.overlay-correcto { background: #1F4620; color: #7EE787; }
+.overlay-icono.overlay-incorrecto { background: #4A1F1F; color: #FF8A80; }
+
+.overlay-nombre {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.overlay-tiempo {
+  font-size: 1rem;
+  color: #8B93A7;
+  margin: 0;
+}
+
+/* ---- Footer mínimo ---- */
+.panel-footer-minimo {
+  text-align: center;
+  padding: 4px;
+  font-size: 0.7rem;
+  color: #555;
+}
