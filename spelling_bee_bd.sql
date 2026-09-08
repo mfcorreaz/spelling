@@ -5,7 +5,7 @@
 
 CREATE DATABASE IF NOT EXISTS spelling_bee
   CHARACTER SET utf8mb4
-COLLATE utf8mb4_spanish_ci;
+  COLLATE utf8mb4_unicode_ci;
 
 USE spelling_bee;
 
